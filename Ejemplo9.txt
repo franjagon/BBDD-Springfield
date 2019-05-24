@@ -1,0 +1,12 @@
+  use SPRINGFIELD;
+
+  
+  load data local infile '/home/springfield/Descargas/frases.txt'
+  into table FRASES
+  fields terminated by '|' enclosed by '' escaped by'';
+
+  commit;
+
+  select * from FRASES;
+
+

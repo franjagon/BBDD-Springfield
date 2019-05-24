@@ -1,0 +1,35 @@
+  use SPRINGFIELD;
+
+/*alter table PERSONAJES
+  add foreign key fk_lugp_pers(ID_LUGAR_PROFESION)
+  references LUGARES(ID_LUGAR);
+
+  alter table PERSONAJES
+  add foreign key fk_lug_pers(ID_LUGAR_RESIDENCIA)
+  references LUGARES(ID_LUGAR);
+
+  alter table PERSONAJES
+  add foreign key fk_mat_pers(ID_MATRIMONIO)
+  references MATRIMONIOS(ID_MATRIMONIO);
+
+  alter table PERSONAJES
+  add foreign key fk_prof_pers(ID_PROFESION)
+  references PROFESIONES(ID_PROFESION);
+
+  alter table PERSONAJES
+  add foreign key fk_sexo_pers(ID_SEXO)
+  references SEXO(ID_SEXO);
+
+  alter table PERSONAJES
+  add foreign key fk_fam_pers(ID_FAMILIA)
+  references FAMILIAS(ID_FAMILIA);
+
+  alter table MASCOTAS
+  add foreign key fk_fam_masc(ID_FAMILIA)
+  references FAMILIAS(ID_FAMILIA);
+
+  alter table LUGARES
+  add foreign key fk_ciu_lug(ID_CIUDAD)
+  references CIUDADES(ID_CIUDAD);*/
+
+  commit;

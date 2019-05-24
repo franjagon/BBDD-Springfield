@@ -1,0 +1,88 @@
+  use SPRINGFIELD;
+
+/*create table if not exists AUX_PROF(DESCRI VARCHAR(255));
+
+  insert into AUX_PROF values ('JUBILADO');
+  insert into AUX_PROF values ('EMPRESARIO');
+  insert into AUX_PROF values ('ESTUDIANTE');
+  insert into AUX_PROF values ('AMA DE CASA');
+  insert into AUX_PROF values ('ESTUDIANTE');
+  insert into AUX_PROF values ('INSPECTOR DE SEGURIDAD');
+  insert into AUX_PROF values ('FUNCIONARIO DE TRAFICO');
+  insert into AUX_PROF values ('FUNCIONARIO DE TRAFICO');
+  insert into AUX_PROF values ('EMPRESARIO');
+  insert into AUX_PROF values ('ESTUDIANTE');
+  insert into AUX_PROF values ('ESTUDIANTE');
+  insert into AUX_PROF values ('AMA DE CASA');
+  insert into AUX_PROF values ('JEFE DE POLICIA');
+  insert into AUX_PROF values ('AMA DE CASA');
+  insert into AUX_PROF values ('ESTUDIANTE');
+  insert into AUX_PROF values ('AMA DE CASA');
+  insert into AUX_PROF values ('EMPRESARIO');
+  insert into AUX_PROF values ('ENCARGADO');
+  insert into AUX_PROF values ('ADMINISTRATIVO');
+  insert into AUX_PROF values ('ESTUDIANTE');
+  insert into AUX_PROF values ('EMPRESARIO');
+  insert into AUX_PROF values ('JUBILADO');
+  insert into AUX_PROF values ('ENCARGADO');
+  insert into AUX_PROF values ('JUBILADO');
+  insert into AUX_PROF values ('STRIPPER'); 
+  insert into AUX_PROF values ('ESTUDIANTE'); 
+  insert into AUX_PROF values ('ESPECTACULO DE CIRCO'); 
+  insert into AUX_PROF values ('DIRECTOR'); 
+  insert into AUX_PROF values ('JUBILADO'); 
+  insert into AUX_PROF values ('SARGENTO'); 
+  insert into AUX_PROF values ('SOLDADO'); 
+  insert into AUX_PROF values ('REVERENDO'); 
+  insert into AUX_PROF values ('AMA DE CASA'); 
+  insert into AUX_PROF values ('ESTUDIANTE'); 
+  insert into AUX_PROF values ('SAXOFONISTA'); 
+  insert into AUX_PROF values ('AMA DE CASA'); 
+  insert into AUX_PROF values ('MEDICO'); 
+  insert into AUX_PROF values ('CORREDOR DE BOLSA');  
+  insert into AUX_PROF values ('ESTUDIANTE');  
+  insert into AUX_PROF values ('AMA DE CASA');
+  insert into AUX_PROF values ('JUBILADO'); 
+  insert into AUX_PROF values ('PROFESOR');
+  insert into AUX_PROF values ('EMPRESARIO'); 
+  insert into AUX_PROF values ('CAPO DE LA MAFIA'); 
+  insert into AUX_PROF values ('PRESENTADOR DE TELEVISION'); 
+  insert into AUX_PROF values ('ASISTENTE PERSONAL'); 
+  insert into AUX_PROF values ('PILOTO DE HELICOPTEROS'); 
+  insert into AUX_PROF values ('POLICIA'); 
+  insert into AUX_PROF values ('POLICIA'); 
+  insert into AUX_PROF values ('INSPECTOR DE SEGURIDAD');
+  insert into AUX_PROF values ('SUPERVISOR DE INSPECTORES DE SEGURIDAD'); 
+  insert into AUX_PROF values ('INGENIERA'); 
+  insert into AUX_PROF values ('ACTOR SECUNDARIO'); 
+  insert into AUX_PROF values ('LADRON'); 
+  insert into AUX_PROF values ('LIMPIADOR'); 
+  insert into AUX_PROF values ('BAILARIN'); 
+  insert into AUX_PROF values ('ACTOR'); 
+  insert into AUX_PROF values ('MASCOTA OFICIAL');
+  insert into AUX_PROF values ('ACTOR SECUNDARIO');
+  insert into AUX_PROF values ('ENCARGADO'); 
+  insert into AUX_PROF values ('ABOGADO'); 
+  insert into AUX_PROF values ('PRESENTADOR DE TELEVISION');
+  insert into AUX_PROF values ('CHICA DEL TIEMPO'); 
+  insert into AUX_PROF values ('ACTOR'); 
+  insert into AUX_PROF values ('PSIQUIATRA'); 
+  insert into AUX_PROF values ('JUBILADO'); 
+  insert into AUX_PROF values ('ALCALDE');
+
+  commit;
+
+  select * from AUX_PROF
+  select count(*) as Total, count(distinct DESCRI) from AUX_PROF;
+
+  insert into PROFESIONES (DESC_PROFESION, FECHA_INSERT, FECHA_MODIFICACION)
+    select distinct DESCRI, NOW(), NOW() from AUX_PROF;
+
+  commit;
+
+  select * from PROFESIONES;
+
+  drop table if exists AUX_PROF;*/
+
+  
+

@@ -1,0 +1,6 @@
+/* show databases;
+   show tables from sys;
+   show columns from sys.host_summary;
+   
+   create database if not exists SPRINGFIELD;
+   drop database if exists SPRINGFIELD; */

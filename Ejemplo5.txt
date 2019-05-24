@@ -1,0 +1,34 @@
+  use SPRINGFIELD;
+
+/*insert into FAMILIAS values (1, 'SIMPSONS', NOW(), NOW());
+  insert into FAMILIAS values (2, 'BOUVIER', SYSDATE(), SYSDATE());
+  insert into FAMILIAS values (3, 'FLANDERS', NOW(), NOW());
+  insert into FAMILIAS values (4, 'WIGGUM', NOW(), NOW());
+  insert into FAMILIAS values (5, 'SPUCKLER', NOW(), NOW());
+  insert into FAMILIAS values (6, 'NAHASAPEEMAPETILON', NOW(), NOW());
+  insert into FAMILIAS values (7, 'VAN HOUTEN', NOW(), NOW());
+  insert into FAMILIAS values (8, 'BURNS', NOW(), NOW());
+  insert into FAMILIAS values (9, 'MUNTZ', NOW(), NOW());
+  insert into FAMILIAS values (10, 'SKINNER', NOW(), NOW());
+  insert into FAMILIAS values (11, 'LOVEJOY', NOW(), NOW());
+  insert into FAMILIAS values (12, 'HIBBERT', NOW(), NOW());
+  insert into FAMILIAS values (13, 'PRINCE', NOW(), NOW());
+  update FAMILIAS set FECHA_INSERT = NOW(), FECHA_MODIFICACION = NOW() where ID_FAMILIA = 4;
+
+  insert into SEXO values (1, 'HOMBRE', NOW(), NOW());
+  insert into SEXO values (2, 'MUJER', SYSDATE(), SYSDATE());
+
+  insert into MATRIMONIOS values (1, 'HOMMER & MARGE SIMPSON', NOW(), NOW());
+  insert into MATRIMONIOS values (2, 'NEDD & MAUDE FLANDERS', NOW(), NOW());
+  insert into MATRIMONIOS values (3, 'CLANCY & SARAH WIGGUM', NOW(), NOW());
+  insert into MATRIMONIOS values (4, 'TIMOTHY & HELEN LOVEJOY', NOW(), NOW());
+  insert into MATRIMONIOS values (5, 'APU & MANJULA NAHASAPEEMAPETILON', NOW(), NOW());
+  insert into MATRIMONIOS values (6, 'KIRK & LUANN VAN HOUTEN', NOW(), NOW());
+  insert into MATRIMONIOS values (7, 'POPPA & LILY MUNTZ', NOW(), NOW());
+  insert into MATRIMONIOS values (8, 'SHELDON & AGNES SKINNER', NOW(), NOW());
+  insert into MATRIMONIOS values (9, 'JULIUS & BERNICE HIBBERT', NOW(), NOW());
+  insert into MATRIMONIOS values (10, 'MARTIN & MARTHA PRINCE', NOW(), NOW());*/
+
+  commit;
+
+  select * from MATRIMONIOS;
