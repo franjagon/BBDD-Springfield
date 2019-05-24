@@ -1,0 +1,66 @@
+   use SPRINGFIELD;
+
+/* Consulta para saber cuantos personajes no pertenecen a las familias SIMPSON y FLANDERS incluyendo los que tienen valor NULL en el campo ID_FAMILIA */
+
+   select P.DESC_PERSONAJE, F.DESC_FAMILIA
+   from PERSONAJES as P
+   left outer join FAMILIAS as F on P.ID_FAMILIA = F.ID_FAMILIA
+   where F.DESC_FAMILIA NOT IN ('SIMPSONS', 'FLANDERS') or isnull(P.ID_FAMILIA)
+   ;
+
+/* Consulta para saber cuantos personajes tiene cada familia incluyendo los que tienen valor NULL en el campo ID_FAMILIA ordenando de mayor a menor número de miembros */
+
+   select F.DESC_FAMILIA, count(*) as N_MIEMBROS
+   from PERSONAJES as P
+   left outer join FAMILIAS as F on P.ID_FAMILIA = F.ID_FAMILIA
+   group by F.DESC_FAMILIA
+   order by N_MIEMBROS desc
+   ;
+
+/* Consulta para saber cuantas familias tienen entre 3 y 5 miembros (que no sean SIMPSON y FLANDERS) incluyendo los que tienen valor NULL en el campo ID_FAMILIA ordenando de mayor a menor número de miembros */
+
+   select F.DESC_FAMILIA, count(*) as N_MIEMBROS
+   from PERSONAJES as P
+   left outer join FAMILIAS as F on P.ID_FAMILIA = F.ID_FAMILIA
+   where F.DESC_FAMILIA NOT IN ('SIMPSONS', 'FLANDERS') or isnull(P.ID_FAMILIA)
+   group by F.DESC_FAMILIA
+   having N_MIEMBROS between 3 and 5 
+   order by N_MIEMBROS desc
+   ;
+
+/* Consulta para saber que personajes viven en la calle 'EVERGREEN TERRACE' y trabajan en la 'PLANTA NUCLEAR' */
+
+   select P.DESC_PERSONAJE, L.DESC_LUGAR as DESC_LUGAR_RESIDENCIA, LL.DESC_LUGAR as DESC_LUGAR_PROFESION
+   from PERSONAJES as P
+   inner join LUGARES as L on P.ID_LUGAR_RESIDENCIA = L.ID_LUGAR
+   inner join LUGARES as LL on P.ID_LUGAR_PROFESION = LL.ID_LUGAR
+   where L.DESC_LUGAR like '%EVERGREEN%TERRACE%'
+   and LL.DESC_LUGAR like '%NUCLEAR%'
+   ;
+
+/* Consulta para saber que mujeres estudian o trabajan en la 'ESCUELA' */
+
+   select P.DESC_PERSONAJE, LL.DESC_LUGAR as DESC_LUGAR_PROFESION
+   from PERSONAJES as P
+   inner join SEXO as S on P.ID_SEXO = S.ID_SEXO
+   inner join LUGARES as LL on P.ID_LUGAR_PROFESION = LL.ID_LUGAR
+   where LL.DESC_LUGAR like '%ESCUELA%'
+   and S.DESC_SEXO = 'MUJER'
+   ;
+
+/* Consulta para saber que personajes masculinos tienen mascotas */
+
+   select distinct P.DESC_PERSONAJE
+   from PERSONAJES as P
+   inner join SEXO as S on P.ID_SEXO = S.ID_SEXO
+   inner join MASCOTAS as M on P.ID_FAMILIA = M.ID_FAMILIA
+   where S.DESC_SEXO = 'HOMBRE'
+   ;
+
+/* Consulta para saber que personajes (ordenados de forma ascendente) dicen frases famosas */
+
+   select distinct P.DESC_PERSONAJE, F.DESC_FRASE
+   from PERSONAJES as P
+   inner join FRASES as F on P.ID_PERSONAJE = F.ID_PERSONAJE
+   order by P.DESC_PERSONAJE
+   ;
