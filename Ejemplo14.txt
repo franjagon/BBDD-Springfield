@@ -1,0 +1,44 @@
+use SPRINGFIELD;
+
+/*
+  select time('1972-04-03 00:02:05.045738'); --> devuelve: 00:02:05.045738 [La hora HH:MM:SS.XXXXXX]
+
+  select microsecond('1972-04-03 00:02:05.045738'); --> devuelve: 45738 [Los microsegundos]
+  select second('1972-04-03 00:02:05.045738'); --> devuelve: 5 [Los segundos]
+  select minute('1972-04-03 00:02:05.045738'); --> devuelve: 2 [Los minutos]
+  select hour('1972-04-03 00:02:05.045738'); --> devuelve: 0 [La hora]
+
+  select date('1976-01-01 00:02:05.045738'); --> devuelve: 1976-01-01 [La fecha AAAA-MM.DD]
+
+  select day('1976-01-01 00:02:05.045738'); --> devuelve: 1 [El día del mes en numérico]
+  select weekday('1976-01-01 00:02:05.045738'); --> devuelve: 3 [El día de la semana en numérico. Mon = 0 ; Tue = 1 ; Wed = 2 ; Thu = 3 ; Fri = 4 ; Sat = 5 ; Sun = 6]
+  select dayofweek('1976-01-01 00:02:05.045738'); --> devuelve: 5 [El día de la semana en numérico. Sat = 0 ; Sun = 1 ; Mon = 2 ; Tue = 3 ; Wed = 4 ; Thu = 5 ; Fri = 6]
+  select dayofmonth('1976-01-01 00:02:05.045738'); --> devuelve: 1 [El día del mes en numérico]
+  select dayofyear('1976-01-01 00:02:05.045738'); --> devuelve: 1 [El día del año gregoriano en numérico]
+  select dayname('1976-01-01 00:02:05.045738'); --> devuelve: Thursday [El nombre del día de la semana]
+  select last_day('1976-01-01 00:02:05.045738'); --> devuelve: 1976-01-31 [El último día del mes de la fecha]
+
+  select week('1976-01-01 00:02:05.045738', 0); --> devuelve: 0 [Semana del año en numérico. Las semanas comienzan el domingo. La primera semana del año es 0 si no es completa y 1 si es completa]
+  select week('1976-01-01 00:02:05.045738', 5); --> devuelve: 0 [Semana del año en numérico. Las semanas comienzan el lunes. La primera semana del año es 0 si no es completa y 1 si es completa]
+
+  select week('1976-01-01 00:02:05.045738', 4); --> devuelve: 0 [Semana del año en numérico. Las semanas comienzan el domingo. La primera semana del año es 0 si tiene 3 días o menos y 1 si tiene más de 3 días]
+  select week('1976-01-01 00:02:05.045738', 1); --> devuelve: 1 [Semana del año en numérico. Las semanas comienzan el lunes. La primera semana del año es 0 si tiene 3 días o menos y 1 si tiene más de 3 días]
+
+  select week('1976-01-01 00:02:05.045738', 2); --> devuelve: 52 [Semana del año en numérico. Las semanas comienzan el domingo. La primera semana del año es del año anterior si no es completa y 1 si es completa]
+  select week('1976-01-01 00:02:05.045738', 7); --> devuelve: 52 [Semana del año en numérico. Las semanas comienzan el lunes. La primera semana del año es del año anterior si no es completa y 1 si es completa]
+
+  select week('1976-01-01 00:02:05.045738', 6); --> devuelve: 53 [Semana del año en numérico. Las semanas comienzan el domingo. La primera semana del año es del año anterior si tiene 3 días o menos y 1 si tiene más de 3 días]
+  select week('1976-01-01 00:02:05.045738', 3); --> devuelve: 1 [Semana del año en numérico. Las semanas comienzan el lunes. La primera semana del año es del año anterior si tiene 3 días o menos y 1 si tiene más de 3 días]
+  
+  select weekofyear('1976-01-01 00:02:05.045738'); --> devuelve: 1 [Semana del año en numérico. Las semanas comienzan el lunes. La primera semana del año es del año anterior si tiene 3 días o menos y 1 si tiene más de 3 días]
+
+  select month('1976-01-01 00:02:05.045738'); --> devuelve: 1 [El mes en numérico]
+  select monthname('1976-01-01 00:02:05.045738'); --> devuelve: January [El nombre del mes del año]
+
+  select quarter('1976-01-01 00:02:05.045738'); --> devuelve: 1 [El trimestre del año en numérico]
+
+  select year('1976-01-01 00:02:05.045738'); --> devuelve: 1976 [El año en numérico]
+  select yearweek('1976-01-01 00:02:05.045738'); --> devuelve: 197552 [Concatena el año con la semana del año en numérico. Las semanas comienzan el domingo. La primera semana del año es del año anterior si no es completa y 1 si es completa]
+*/
+
+

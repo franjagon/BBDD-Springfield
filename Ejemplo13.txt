@@ -1,0 +1,62 @@
+  use SPRINGFIELD;
+
+/*
+  select curdate(), current_date(); --> devuelven la fecha del sistema AAAA-MM-DD
+  select curtime(), current_time(); --> devuelven la hora del sistema HH:MM:SS
+  select current_timestamp(), localtime(), localtimestamp(), now(), sysdate(); --> devuelven la fechahora del sistema AAAA-MM-DD HH:MM:SS
+
+  select date_format('1972-04-03 00:02:05.045738', '%a'); --> devuelve: Mon [El nombre del día de la semana abreviado]
+  select date_format('1972-04-03 00:02:05.045738', '%W'); --> devuelve: Monday [El nombre del día de la semana]
+  select date_format('1972-04-06 00:02:05.045738', '%w'); --> devuelve: 1 [El día de la semana en numérico. Sun = 0 ; Mon = 1 ; Tue = 2 ; Wed = 3 ; Thu = 4 ; Fri = 5 ; Sat = 6]
+
+  select date_format('1972-04-03 00:02:05.045738', '%D'); --> devuelve: 3rd [El ordinal del día del mes]
+  select date_format('1972-04-03 00:02:05.045738', '%d'); --> devuelve: 03 [El día del mes en numérico DD]
+  select date_format('1972-04-03 00:02:05.045738', '%e'); --> devuelve: 3 [El día del mes en numérico]
+  select date_format('1972-04-03 00:02:05.045738', '%j'); --> devuelve: 094 [El día del año gregoriano en numérico XXX]
+
+  select date_format('1972-04-03 00:02:05.045738', '%b'); --> devuelve: Apr [El nombre del mes del año abreviado]
+  select date_format('1972-04-03 00:02:05.045738', '%M'); --> devuelve: April [El nombre del mes del año]
+
+  select date_format('1972-04-03 00:02:05.045738', '%c'); --> devuelve: 4 [El mes del año en numérico]
+  select date_format('1972-04-03 00:02:05.045738', '%m'); --> devuelve: 04 [El mes del año en numérico MM]
+
+  select date_format('1972-04-03 00:02:05.045738', '%Y'); --> devuelve: 1972 [El año en numérico AAAA]
+  select date_format('1972-04-03 00:02:05.045738', '%y'); --> devuelve: 72 [El año sin siglo en numérico AA]
+
+  select date_format('1972-04-03 00:02:05.045738', '%U'); --> devuelve: 14 [Semana del año en numérico SS. Las semanas comienzan el domingo. La primera semana del año es 00 si no es completa y 01 si es completa]
+  select date_format('1972-04-03 00:02:05.045738', '%V'); --> devuelve: 14 [Semana del año en numérico SS. Las semanas comienzan el domingo. La primera semana del año es del año anterior si no es completa y 01 si es completa]
+  select date_format('1972-04-03 00:02:05.045738', '%u'); --> devuelve: 14 [Semana del año en numérico SS. Las semanas comienzan el lunes. La primera semana del año es 00 si no es completa y 01 si es completa]
+  select date_format('1972-04-03 00:02:05.045738', '%v'); --> devuelve: 14 [Semana del año en numérico SS. Las semanas comienzan el lunes. La primera semana del año es del año anterior si no es completa y 01 si es completa]
+
+  select date_format('1972-04-03 00:02:05.045738', '%T'); --> devuelve: 00:02:05 [La hora en formato 24h HH:MM:SS]
+  select time_format('1972-04-03 00:02:05.045738', '%T'); --> devuelve: 00:02:05 [La hora en formato 24h HH:MM:SS]
+  select date_format('1972-04-03 00:02:05.045738', '%r'); --> devuelve: 12:02:05 AM [La hora en formato 12h HH:MM:SS ZZ]
+  select time_format('1972-04-03 00:02:05.045738', '%r'); --> devuelve: 12:02:05 AM [La hora en formato 12h HH:MM:SS ZZ] 
+
+  select date_format('1972-04-03 00:02:05.045738', '%f'); --> devuelve: 045738 [Los microsegundos XXXXXX]
+  select time_format('1972-04-03 00:02:05.045738', '%f'); --> devuelve: 045738 [Los microsegundos XXXXXX]
+
+  select date_format('1972-04-03 00:02:05.045738', '%S'); --> devuelve: 05 [Los segundos SS]
+  select time_format('1972-04-03 00:02:05.045738', '%S'); --> devuelve: 05 [Los segundos SS]
+  select date_format('1972-04-03 00:02:05.045738', '%s'); --> devuelve: 05 [Los segundos SS]
+  select time_format('1972-04-03 00:02:05.045738', '%s'); --> devuelve: 05 [Los segundos SS]
+
+  select date_format('1972-04-03 00:02:05.045738', '%i'); --> devuelve: 02 [Los minutos MM]
+  select time_format('1972-04-03 00:02:05.045738', '%i'); --> devuelve: 02 [Los minutos MM]
+
+  select date_format('1972-04-03 00:02:05.045738', '%H'); --> devuelve: 00 [La hora en formato 24h HH]
+  select time_format('1972-04-03 00:02:05.045738', '%H'); --> devuelve: 00 [La hora en formato 24h HH]
+  select date_format('1972-04-03 00:02:05.045738', '%k'); --> devuelve: 0 [La hora en formato 24h]
+  select time_format('1972-04-03 00:02:05.045738', '%k'); --> devuelve: 0 [La hora en formato 24h]
+
+  select date_format('1972-04-03 00:02:05.045738', '%h'); --> devuelve: 12 [La hora en formato 12h HH]
+  select time_format('1972-04-03 00:02:05.045738', '%h'); --> devuelve: 12 [La hora en formato 12h HH]
+  select date_format('1972-04-03 00:02:05.045738', '%I'); --> devuelve: 12 [La hora en formato 12h HH]
+  select time_format('1972-04-03 00:02:05.045738', '%I'); --> devuelve: 12 [La hora en formato 12h HH]
+  select date_format('1972-04-03 00:02:05.045738', '%l'); --> devuelve: 12 [La hora en formato 12h]
+  select time_format('1972-04-03 00:02:05.045738', '%l'); --> devuelve: 12 [La hora en formato 12h]
+  select date_format('1972-04-03 00:02:05.045738', '%p'); --> devuelve: AM [El indicador AM/PM]
+  select time_format('1972-04-03 00:02:05.045738', '%p'); --> devuelve: AM [El indicador AM/PM]
+*/
+
+
