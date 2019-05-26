@@ -38,7 +38,28 @@ use SPRINGFIELD;
   select quarter('1976-01-01 00:02:05.045738'); --> devuelve: 1 [El trimestre del año en numérico]
 
   select year('1976-01-01 00:02:05.045738'); --> devuelve: 1976 [El año en numérico]
-  select yearweek('1976-01-01 00:02:05.045738'); --> devuelve: 197552 [Concatena el año con la semana del año en numérico. Las semanas comienzan el domingo. La primera semana del año es del año anterior si no es completa y 1 si es completa]
+  select yearweek('1976-01-01 00:02:05.045738'); --> devuelve: 197552 [Concatena el año con la semana del año en numérico. Las semanas comienzan el domingo. La primera semana del año es del año anterior si no es completa y 1 si es completa]  select extract(microsecond from '1972-04-03 23:02:05.045738'); --> devuelve: 45738 [Los microsegundos]
+
+  select extract(second from '1972-04-03 23:02:05.045738'); --> devuelve: 5 [Los segundos]
+  select extract(minute from '1972-04-03 23:02:05.045738'); --> devuelve: 2 [Los minutos]
+  select extract(hour from '1972-04-03 23:02:05.045738'); --> devuelve: 23 [La hora en formato 24h]
+  select extract(day from '1972-04-03 23:02:05.045738'); --> devuelve: 3 [El día del mes en numérico]
+  select extract(week from '1972-04-03 23:02:05.045738'); --> devuelve: 14 [Semana del año en numérico. Las semanas comienzan el domingo. La primera semana del año es 0 si no es completa y 1 si es completa]
+  select extract(month from '1972-04-03 23:02:05.045738'); --> devuelve: 4 [El mes del año en numérico]
+  select extract(quarter from '1972-04-03 23:02:05.045738'); --> devuelve: 2 [El trimestre del año en numérico]
+  select extract(year from '1972-04-03 00:23:05.045738'); --> devuelve: 1972 [El año en numérico]
+
+  select extract(second_microsecond from '1972-04-03 23:02:05.045738'); --> devuelve: 5045738 [concatena los segundos y los microsegundos sin separador]	
+  select extract(minute_microsecond from '1972-04-03 23:02:05.045738'); --> devuelve: 205045738 [concatena los minutos, segundos y los microsegundos sin separador]
+  select extract(minute_second from '1972-04-03 23:02:05.045738'); --> devuelve: 205 [concatena los minutos y los segundos sin separador]
+  select extract(hour_microsecond from '1972-04-03 23:02:05.045738'); --> devuelve: 230205045738 [concatena la hora, los minutos, los segundos y los microsegundos sin separador]
+  select extract(hour_second from '1972-04-03 23:02:05.045738'); --> devuelve: 230205 [concatena la hora, los minutos y los segundos sin separador]
+  select extract(hour_minute from '1972-04-03 23:02:05.045738'); --> devuelve: 2302 [concatena la hora y los minutos sin separador]
+  select extract(day_microsecond from '1972-04-03 23:02:05.045738'); --> devuelve: 3230205045738 [concatena el día, la hora, los minutos, los segundos y los microsegundos sin separador]
+  select extract(day_second from '1972-04-03 23:02:05.045738'); --> devuelve: 3230205 [concatena el día, la hora, los minutos y los segundos sin separador]
+  select extract(day_minute from '1972-04-03 23:02:05.045738'); --> devuelve: 32302 [concatena el día, la hora y los minutos sin separador]
+  select extract(day_hour from '1972-04-03 23:02:05.045738'); --> devuelve: 323 [concatena el día y la hora sin separador]
+  select extract(year_month from '1972-04-03 23:02:05.045738'); --> devuelve: 197204 [concatena el año y el mes sin separador]
 */
 
 
