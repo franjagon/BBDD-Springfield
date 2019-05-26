@@ -39,6 +39,18 @@ use SPRINGFIELD;
 
   select makedate(1972, 114); --> devuelve 1972-04-23 [Monta un formato fecha a partir de los valores de año y día gregoriano]
   select maketime(19, 14, 3); --> devuelve 19:14:03 [Monta un formato hora a partir de los valores de hora, minuto y segundo]
+
+  select datediff('9999-04-03 23:02:05.045738', '0001-04-03 23:02:05.045738'); --> devuelve 3651694 [La diferencia en días entre las dos fechas. También calcula diferencias negativas]
+  select timediff('2004-04-03 23:02:05.045738', '2004-03-03 11:46:38.088638'); --> devuelve 755:15:26.957100 [La diferencia en horas, minutos, segundos y microsegundos entre las dos fechas. También calcula diferencias negativas]
+  select period_diff(197204, 201905); --> devuelve -565 [La diferencia en meses entre los dos periodos añomes]
+
+  select to_days('1972-04-03'); --> devuelve 720351 [Convierte una fecha en el número de días transcurridos]
+  select from_days(720351); --> devuelve 1972-04-03 [Convierte un número de días transcurridos en una fecha]
+
+  select str_to_date('23/Apr/1972', '%d/%b/%Y'); --> devuelve 1972-04-03 [Monta una fecha a partir de una cadena. Le indicamos el formato de la cadena]
+
+  select time_to_sec('00:01:01'); --> devuelve 61 [El número de segundos de una hora]
+  select sec_to_time(71); --> devuelve 00:01:11 [La hora a partir del número de segundos]
 */
 
 
